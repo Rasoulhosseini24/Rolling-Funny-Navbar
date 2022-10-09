@@ -1,0 +1,142 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body{
+background-color: palevioletred;
+}
+
+.container{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+}
+
+.nav-bar{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+align-items: center;
+justify-content: space-between;
+background-color: black;
+padding: 20px;
+}
+
+.nav-bar hr{
+width: 300px;
+transition: all .3s ease;
+background-color: palevioletred;
+height: 3px;
+border-radius: 8px;
+border: none;
+}
+
+.hr-active{
+transform:translateX(400px) ;
+}
+
+.img{
+transform: translateX(300px) rotate(360deg);
+
+}
+
+.logo{
+display: block;
+width: 120px;
+height: 120px;
+margin-left: 20px;
+outline: none;
+transition: all .5s ease;
+}
+
+.logo img{
+width: 100%;
+height: 100%;
+transition: all .5s ease;
+}
+
+nav{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+max-height: 150px;
+width: 750px;
+justify-content: center;
+transition: max-height .3s ease;
+}
+
+
+nav a{
+display: block;
+height: 50px;
+text-decoration: none;
+font-size: 16px;
+color: palevioletred;
+font-weight: 600;
+text-transform: uppercase;
+margin: 0 12px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+transition: all .2s ease;
+padding: 5px;
+width: 140px;
+text-align: center;
+}
+
+nav a:hover{
+border-radius:12px;
+background-color: gray;
+transform: translate(0,8px);
+font-size: 18px;
+color: purple;
+box-shadow: 0 5px 8px 0;
+}
+
+.div{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+position: fixed;
+right: 20px;
+top: 20px;
+width: 40px;
+z-index: 1;
+cursor: pointer;
+height: 40px;
+}
+
+.div span{
+background-color: plum;
+height: 4px;
+width: 100%;
+border-radius: 12px;
+transition: all .2s ease;
+
+}
+
+.div:hover span:nth-child(2){
+transform: translateX(12px);
+background-color: purple;
+}
+
+.div.active span:nth-child(1){
+transform: translate(0px,11px) rotate(-45deg);
+background-color: purple;
+}
+
+.div.active span:nth-child(2){
+opacity: 0;
+}
+
+.div.active span:nth-child(3){
+transform: translate(0px, -14px) rotate(45deg);
+background-color: purple;
+}
+
+
+.none{
+max-height: 0;
+overflow: hidden;
+}
